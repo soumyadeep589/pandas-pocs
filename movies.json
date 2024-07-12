@@ -1,0 +1,44 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "genre": "Drama",
+        "release_date": "1994-09-23",
+        "rating": 9.3
+      },
+      {
+        "id": 2,
+        "title": "The Godfather",
+        "director": "Francis Ford Coppola",
+        "genre": "Crime",
+        "release_date": "1972-03-24",
+        "rating": 9.2
+      },
+      {
+        "id": 3,
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "genre": "Action",
+        "release_date": "2008-07-18",
+        "rating": 9.0
+      },
+      {
+        "id": 4,
+        "title": "12 Angry Men",
+        "director": "Sidney Lumet",
+        "genre": "Drama",
+        "release_date": "1957-04-10",
+        "rating": 8.9
+      },
+      {
+        "id": 5,
+        "title": "Schindler's List",
+        "director": "Steven Spielberg",
+        "genre": "Biography",
+        "release_date": "1993-12-15",
+        "rating": 8.9
+      }
+    ]
+  }

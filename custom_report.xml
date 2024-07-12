@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<imdb>
+    <movie>
+        <id attribute="value">1</id>
+        <title attribute="value">The Shawshank Redemption</title>
+        <director attribute="value">Frank Darabont</director>
+        <genre attribute="value">Drama</genre>
+        <release_date attribute="value">1994-09-23</release_date>
+        <rating attribute="value">9.3</rating>
+    </movie>
+    <movie>
+        <id attribute="value">2</id>
+        <title attribute="value">The Godfather</title>
+        <director attribute="value">Francis Ford Coppola</director>
+        <genre attribute="value">Crime</genre>
+        <release_date attribute="value">1972-03-24</release_date>
+        <rating attribute="value">9.2</rating>
+    </movie>
+    <movie>
+        <id attribute="value">3</id>
+        <title attribute="value">The Dark Knight</title>
+        <director attribute="value">Christopher Nolan</director>
+        <genre attribute="value">Action</genre>
+        <release_date attribute="value">2008-07-18</release_date>
+        <rating attribute="value">9.0</rating>
+    </movie>
+    <movie>
+        <id attribute="value">4</id>
+        <title attribute="value">12 Angry Men</title>
+        <director attribute="value">Sidney Lumet</director>
+        <genre attribute="value">Drama</genre>
+        <release_date attribute="value">1957-04-10</release_date>
+        <rating attribute="value">8.9</rating>
+    </movie>
+    <movie>
+        <id attribute="value">5</id>
+        <title attribute="value">Schindler's List</title>
+        <director attribute="value">Steven Spielberg</director>
+        <genre attribute="value">Biography</genre>
+        <release_date attribute="value">1993-12-15</release_date>
+        <rating attribute="value">8.9</rating>
+    </movie>
+</imdb>
