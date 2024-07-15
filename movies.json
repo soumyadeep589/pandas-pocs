@@ -38,7 +38,15 @@
         "director": "Steven Spielberg",
         "genre": "Biography",
         "release_date": "1993-12-15",
-        "rating": 8.9
+        "rating": 8
+      },
+      {
+        "id": 6,
+        "title": "Schindler's List",
+        "director": "Steven Spielberg",
+        "genre": "Biography",
+        "release_date": "1993-12-15",
+        "rating": ""
       }
     ]
   }

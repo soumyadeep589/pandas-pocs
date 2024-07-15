@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import numpy as np
 import xml.etree.ElementTree as ET
 
 # Step 1: Fetch data from the API
@@ -26,6 +27,18 @@ print(movies)
 # Step 2: Load data into a DataFrame and manipulate it
 df = pd.DataFrame(movies)
 df_cleaned = df.dropna()
+df_cleaned['rating'].replace("", np.nan, inplace=True)
+df_cleaned.fillna(value={'rating': 10}, inplace=True)
+df_cleaned['rating'] = df_cleaned['rating'].astype(float)
+df_cleaned['genre'] = df_cleaned['genre'].apply(lambda x: str(x).upper())
+
+group_genre = df_cleaned.groupby('genre').size().reset_index(name='genre_count')
+
+movies_with_genre_count = pd.merge(df_cleaned, group_genre, on='genre', how='left')
+
+sorted_movies = movies_with_genre_count.sort_values(by=['rating'], ascending=[True])
+
+print(movies_with_genre_count)
 # df_filtered = df_cleaned[df_cleaned['column_name'] > some_value]
 # df_grouped = df_filtered.groupby('another_column').sum()
 
@@ -39,7 +52,7 @@ def df_to_xml(df, root_tag, row_tag):
             field_elem.text = str(row[field])
     return root
 
-xml_root = df_to_xml(df_cleaned, 'imdb', 'movie')
+xml_root = df_to_xml(sorted_movies, 'imdb', 'movie')
 tree = ET.ElementTree(xml_root)
 tree.write('report.xml', encoding='utf-8', xml_declaration=True)
 
@@ -62,6 +75,6 @@ def df_to_custom_xml(df, root_tag, row_tag):
             field_elem.text = str(row[field])
     return root
 
-xml_root = df_to_custom_xml(df_cleaned, 'imdb', 'movie')
-tree = ET.ElementTree(xml_root)
-tree.write('custom_report.xml', encoding='utf-8', xml_declaration=True)
+# xml_root = df_to_custom_xml(df_cleaned, 'imdb', 'movie')
+# tree = ET.ElementTree(xml_root)
+# tree.write('custom_report.xml', encoding='utf-8', xml_declaration=True)
